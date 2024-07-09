@@ -112,7 +112,7 @@ const plugins = [
   {
     resolve: `medusa-file-s3`,
     options: {
-        s3_url: process.env.S3_URL,
+        file_url: process.env.S3_URL,
         bucket: process.env.S3_BUCKET,
         region: process.env.S3_REGION,
         access_key_id: process.env.S3_ACCESS_KEY_ID,
@@ -129,7 +129,7 @@ const plugins = [
 
 Where:
 
-1. `s3_url` (required) is a string indicating the URL to your bucket. It’s in the form `https://<BUCKET_NAME>.s3.<REGION>.amazonaws.com`, where `<BUCKET_NAME>` is the name of the bucket and the `<REGION>` is the region the bucket is created in. If you’re not sure which region, on your bucket’s page on S3 click on Properties. You can then find the region under AWS Region. Make sure to only copy the code (for example, `us-east-1`).
+1. `file_url` (required) is a string indicating the URL to your bucket. It’s in the form `https://<BUCKET_NAME>.s3.<REGION>.amazonaws.com`, where `<BUCKET_NAME>` is the name of the bucket and the `<REGION>` is the region the bucket is created in. If you’re not sure which region, on your bucket’s page on S3 click on Properties. You can then find the region under AWS Region. Make sure to only copy the code (for example, `us-east-1`).
 2. `bucket` (required) is a string indicating the name of the bucket you created.
 3. `region` (required) is a string indicating the region code of your bucket. For example, `us-east-1`.
 4. `access_key_id` (required) is a string indicating the Access Key ID that you created for your user.
@@ -170,7 +170,7 @@ const plugins = [
   {
     resolve: `medusa-file-s3`,
     options: {
-        s3_url: process.env.S3_URL,
+        file_url: process.env.S3_URL,
         bucket: process.env.S3_BUCKET,
         aws_config_object: {
           customUserAgent: process.env.S3_CUSTOM_AGENT,
